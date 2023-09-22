@@ -1,0 +1,42 @@
+You use the magical stones to create magical amulets. You may create one amulet out of all the stones or chose to divide the n stones into several amulets (some times dividing the stones into multiple amulets results in more total power compared to putting all of them into one amulet). However, when dividing the stones, the magical rules state that you must preserve the original sequence of stones. So for example if N is 5 (the client brought you 5 stones) and you would like to divide them into two amulets: the first amulet could hold stones 1 to 3 and the second amulet could hold stones 4 to 5. You could also divide them into 3 amulets: The first amulet holds stone 1, the second amulet holds stones 2 and 3 and the third amulet holds stones 4 and 5. You may also (as we said) make one amulet that holds all the stones. Many other valid divisions are possible as well. The following is an example of a division that is not allowed (invalid): the 1st amulet holds stones 1 and 3, while amulet two holds stones 2 and 4 and 5.
+
+Naïve sorcerers would think that the power of any amulet is the summation of the power level of the stones it holds. For example, if the power level of stone 1 is 5 and the power level of stone 2 is 4 and the power level of stone 3 is 7, then an amulet that holds the three stones would have a total power level of: 5 + 4 + 7 = 16.
+
+However, your long years of experience taught you that this is not accurate and that the real power level of an amulet is governed by the following magical equation:
+
+Power = p*s*s + q*s + r
+
+s: is the summation of the power level for all the amulet stones
+p, q, r: are the magical factors (constant values).
+Input Format
+
+n (no of stones)
+p q r (magical factors)
+v1 v2 …. vN (power level for each magical stone)
+Constraints
+
+n, p, q, r and all the Vs are integers
+
+Output Format
+
+The maximum total possible power of the amulet(s)
+
+Sample Input 0
+
+4
+-1 10 -20
+2 2 3 4
+Sample Output 0
+
+9
+Explanation 0
+
+In this scenario, the maximum power is achieved by dividing the stones into three amulets:
+
+The first amulet holds stones 1 and 2
+The second amulet holds stone 3
+The third amulet holds stone 4.
+
+A Naïve sorcerer would calculate the power of amulet 1 as 4, and amulet 2 as 3 and amulet 3 as 4. However, The correct power values are 4, 1, 4 respectively (see the equation). This gives a total power of 9 (4+1+4), i.e, when the client wears the three amulets his/her power level will become 9. Notice that no other division of the stones into amulets will get a higher total power than 9.
+
+
